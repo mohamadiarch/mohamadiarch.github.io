@@ -41,14 +41,27 @@ header{
     justify-content: center;
 }
 
+
+
+
 .section-body{
     display: grid;
-    grid-template-columns: 10rem 40rem;
+    @media only screen and (min-width: 500px) {
+        grid-template-columns: 10rem 40rem;
+    }
+    @media only screen and (max-width: 449px) {
+        // grid-template-columns: 100% 100%;
+    }
+    
 }
 
 
 .topic , .details{
     margin-top: 0.7rem;
+    @media only screen and (max-width: 449px) {
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+    }
 }
 
 a{
@@ -68,6 +81,9 @@ a{
     font-size: larger;
     font-weight: 700;
     letter-spacing: 0.6px;
+    @media only screen and (max-width: 449px) {
+        display: none;
+    }
 }
 
 
