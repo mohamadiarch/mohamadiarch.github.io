@@ -1,0 +1,98 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-size: 1.6rem;
+}
+
+header{
+    background-color: #eee;
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    width: 15rem ;
+    border-radius: 50%;
+    filter: grayscale(20%);
+}
+.myname{
+    margin-top: 2rem;
+}
+
+
+.section-body-parent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-body{
+    display: grid;
+    grid-template-columns: 10rem 40rem;
+}
+
+
+.topic , .details{
+    margin-top: 0.7rem;
+}
+
+a{
+    text-decoration: none;
+}
+.logo-link{
+    width: 20px;
+    margin-left: 1rem;
+}
+
+
+.scrolling-words-container {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600; 
+  }
+  
+  .scrolling-words-box {
+    height: 3rem;
+    margin: auto;
+    overflow: hidden;
+    
+    ul {
+      margin: 0 0.625rem;
+      padding: 0;
+      animation: scrollUp 6s infinite;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 3rem;
+        list-style: none; 
+      }
+    }
+  }
+  
+  // Variables
+  $item-count: 5;
+  
+  @keyframes scrollUp {
+    @for $i from 1 through ($item-count - 1) {
+      #{($i * 25) - 10%}, #{$i * 25%} {
+        transform: translateY((-100% / $item-count) * $i);
+      }
+    }
+  }
